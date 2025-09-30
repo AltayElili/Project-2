@@ -8,6 +8,7 @@ import com.bumptech.glide.Glide
 import com.example.project_2.databinding.ItemProductBinding
 import com.example.project_2.db.ProductEntity
 import com.example.project_2.dto.ProductListDto
+import com.example.project_2.R
 
 
 class ProductAdapter(
@@ -63,6 +64,7 @@ class ProductAdapter(
     }
 
     fun updateFavorites(favorites: List<ProductEntity>) {
+
         products = products.map { product ->
             product.copy(isLiked = favorites.any { it.id == product.id })
         }

@@ -1,4 +1,4 @@
-package com.example.project_2
+package com.example.project_2.ui
 
 import android.os.Bundle
 import android.view.View
@@ -6,9 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import com.example.project_2.databinding.ActivityMainBinding
-import dagger.hilt.android.AndroidEntryPoint
+import com.example.project_2.R
 
-@AndroidEntryPoint
+
+
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavigationView.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.menuHome -> findNavController(R.id.fragmentContainerView).navigate(R.id.menuHome)
+                R.id.menuFavories -> findNavController(R.id.fragmentContainerView).navigate(R.id.menuFavories)
                 R.id.menuProfile -> findNavController(R.id.fragmentContainerView).navigate(R.id.menuProfile)
                 else -> false
             }

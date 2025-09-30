@@ -12,5 +12,6 @@ interface AuthService {
 
     @GET("auth/me")
     suspend fun getUserDetails(
+        @retrofit2.http.Header("Authorization") token: String
     ): Response<LoginResponseModel>
 }

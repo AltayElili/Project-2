@@ -1,12 +1,14 @@
-package com.example.project_2
+package com.example.project_2.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.project_2.databinding.ItemWishlistBinding
 import com.example.project_2.db.ProductEntity
 
-class WishListAdapter(
+
+class WishlistAdapter(
     private val onRemoveClick: (ProductEntity, Int) -> Unit
 ) : RecyclerView.Adapter<WishlistAdapter.WishlistViewHolder>() {
 
@@ -14,7 +16,7 @@ class WishListAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WishlistViewHolder {
         val binding =
-            ItemWish.inflate(LayoutInflater.from(parent.context), parent, false)
+            ItemWishlistBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return WishlistViewHolder(binding)
     }
 

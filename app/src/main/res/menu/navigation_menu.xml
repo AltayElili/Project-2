@@ -4,6 +4,9 @@
     <item android:title="Home"
         android:id="@+id/menuHome"
         android:icon="@drawable/home_icon"/>
+    <item android:title="Favories"
+        android:id="@+id/menuFavories"
+        android:icon="@drawable/heart_icon"/>
     <item android:title="Profile"
         android:id="@+id/menuProfile"
         android:icon="@drawable/person_icon"/>
