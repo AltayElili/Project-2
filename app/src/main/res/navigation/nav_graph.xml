@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.project_2.ui.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/menuHome" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/menuHome"
+        android:name="com.example.project_2.ui.ProductFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_menuHome_to_menuProfile2"
+            app:destination="@id/menuProfile" />
+        <action
+            android:id="@+id/action_menuHome_to_productIdFragment"
+            app:destination="@id/productIdFragment" />
+        <action
+            android:id="@+id/action_menuHome_to_wishListFragment"
+            app:destination="@id/wishListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuProfile"
+        android:name="com.example.project_2.ui.MenuProfile"
+        android:label="fragment_menu_profile"
+        tools:layout="@layout/fragment_menu_profile" >
+        <action
+            android:id="@+id/action_menuProfile_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productIdFragment"
+        android:name="com.example.project_2.ui.ProductDetailsFragment"
+        android:label="fragment_product_id"
+        tools:layout="@layout/fragment_product_id" />
+    <fragment
+        android:id="@+id/wishListFragment"
+        android:name="com.example.project_2.WishListFragment"
+        android:label="fragment_wish_list"
+        tools:layout="@layout/fragment_wish_list" />
+</navigation>
